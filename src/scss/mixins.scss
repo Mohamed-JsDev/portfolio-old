@@ -1,0 +1,64 @@
+@import"./variables.scss";
+*{
+  box-sizing: border-box;
+}
+@mixin first-page{
+  background-color: $black;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top:80px ;
+} 
+@mixin  border-round{
+  box-sizing: border-box;
+  animation:  border-round 4s linear infinite;
+} 
+@mixin path{
+  animation: path 2s  linear ;
+}
+@mixin full {
+  animation: full 2s linear forwards ;
+}
+@keyframes border-round{
+  0%{
+    border-top: 3px solid $amazing;
+  }
+  25%{
+    border-right :3px solid $white; ;
+  }
+  75%{
+    border-bottom: 3px solid $amazing;
+  }
+  100%{
+    border-left:3px solid $white; 
+
+  }
+}
+@keyframes path {
+  0%{
+    clip-path: polygon(10% 20%, 20% 10%, 10% 100%, 50% 50%);
+  }
+  20%{
+    clip-path: polygon(50% 100%, 20% 50%, 10% 100%, 50% 50%);
+  }
+  60%{
+      clip-path: polygon(100% 50%, 50% 100%, 100% 500%, 1100% 50%);
+    
+  }
+  100%{
+    clip-path: none;
+  }
+}
+@keyframes full{
+  from {
+    color: $amazing;
+    background-color: $white;
+  }
+  to{
+    color: $white;
+    background-color: $amazing;
+  }
+}
+

@@ -1,0 +1,119 @@
+@import'../variables.scss';
+@import"../mixins.scss";
+.navbar{
+  background-color: $black;
+  max-height: 100px;
+  position: fixed;
+  z-index: 5;
+  top: -30px;
+  right: 0;
+  left: 0;
+  padding: 30px;
+
+}
+.navbar .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+.navbar-brand{
+  color: $white;
+  font-size: 30px;
+  text-decoration: none;
+}
+.navbar-brand:hover {
+  color: $white ;
+}
+.ul-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+ul{
+  display: flex;
+}
+.nav-item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+
+}
+.nav-link ,.nav-link:visited{
+  text-decoration: none;
+  color: $white;
+  font-weight: bold;
+
+}
+
+.nav-link:hover{
+color: $amazing;
+border-bottom: 1px solid $white;
+
+}
+.ul-nav li{
+  @media(max-width: $medium){
+    display: none;
+  }
+  display:flex;
+  
+}
+.togger{
+  display: none;
+  span{
+    display: none;
+  }
+  span:nth-child(2){
+    background-color: $amazing;
+    width: 30px;
+  }
+  @media (max-width:$medium) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: flex-end;
+    border: transparent;
+    flex-direction: column;
+    gap: 5px;
+    span{
+      background-color:  $black;
+      width: 20px;
+      height: 5px;
+      border-radius: 5px;
+      display: block;
+      
+    }
+  }
+}
+.togger:hover {
+  span:nth-child(2){
+  width: 15px;
+}}
+.links-media{
+  display: flex;
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  position: absolute;
+  top: 70px;
+left: 0;
+@media(max-width:$small){
+  display: flex;
+  flex-direction:column;
+}
+  @media(min-width:$medium){
+    display: none;
+  }
+}
+.links-media .nav-link:hover {
+  text-decoration: none;
+  color: $amazing;
+  font-weight: bold;
+
+}
+

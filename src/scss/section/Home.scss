@@ -1,0 +1,81 @@
+@import"../variables.scss";
+@import"../mixins.scss";
+
+
+.Home{
+  @include first-page;
+}
+.Home-page{
+  width: 112%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  .content{
+    width:55%;
+    color: $white;
+    padding: 50px;
+    h2{
+      width: 100%;
+      font-size: 40px;
+    }
+    p{
+      width: 70%;
+      font-size: 27px;
+      opacity: 60%;
+      span{
+        color: $amazing;
+        opacity: 100%;
+      }
+      icon{
+        font-size: 50px ;
+        color: $white;
+      }
+    }
+  }
+  .slider{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 50%;
+
+    .over-lay{
+      color: $amazing;
+      overflow: hidden;
+      width: 70%;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid $amazing;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include path;
+  }
+  img{
+    padding: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 70%;
+    @include path;
+  }
+}
+@media(max-width:$medium){
+  .slider ,.over-lay , img {
+    display: none;
+  }
+  .content{
+    width: 100%;
+    h2{
+    font-size: 25px;
+  }
+  p{
+    font-size: 20px;
+  }
+}
+}
+}
+.slider:hover img {
+  transform:scale(1.2)
+}
+.slider:hover .over-lay{
+  border: none;
+}

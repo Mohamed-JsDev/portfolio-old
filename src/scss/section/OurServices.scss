@@ -1,0 +1,57 @@
+@import"../variables.scss";
+@import"../mixins.scss";
+
+.services{
+  @include first-page;
+  color: $white;
+}
+.Services-page{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
+  @media(max-width:$medium){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column  ;
+  }
+  .card{
+    width: 40%;
+    color: $white;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $black;
+    border-radius: 15px;
+    padding: 20px;
+    border: 6px solid transparent;
+    // @include border-round;
+    @media(max-width:$medium){
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    img{
+      width: 70%;
+      border-bottom: 2px solid $white;
+      padding: 20px;
+      border-radius: 20%;
+    }
+    h4{
+      @extend img;
+      text-align: center;
+      
+    }
+    P{
+      padding: 15px;
+      font-size: 20px;
+    }
+    .icon{
+      font-size: 300px;
+      margin: 40px 0 20px 0;  
+    }
+  }
+}

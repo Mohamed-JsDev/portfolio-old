@@ -1,0 +1,164 @@
+@import"../variables.scss";
+@import"../mixins.scss";
+.Contact{
+  @include first-page;
+  height: 130vh;
+  @media(max-width: $medium){
+    height: 130vh;
+  }
+
+}
+.contact-page{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+
+  @media(max-width: $medium){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    padding: 50px;
+    .contact-text{
+      order: 1;
+      margin-bottom: 20px;
+      width: 120%;
+    }
+    .inputs{
+      order: 2;
+      margin-bottom: 20px;
+      width: 120%;
+    }
+    input::placeholder{
+      font-size: 15px;
+      padding: 5px;
+      border: none;
+    }
+    .btn-form{
+      order: 3;
+      padding: 10px;
+    }
+  }
+}
+.inputs{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  order: 2;
+  
+  
+}
+input{
+  width: 25%;
+  background-color: $black;
+  padding: 30px;
+  border: none;
+  margin: 5px;
+  font-size:25px;
+  color: $white;
+  border-radius: 40px;
+  outline: none;
+  border-bottom:2px dotted $amazing;
+  letter-spacing: 1.5px;
+  @media(max-width:$small){
+    width: 150%; 
+    padding:10px 10px;
+  }
+}
+input:nth-child(2){
+  width: 50%;
+  @media(max-width:$small){
+    width:120%; 
+  }
+}
+input:last-of-type{
+  width: 90%;
+  padding: 50px 20px 10px;
+  margin-bottom: -30px;
+  @media(max-width:$small){
+    width:120%; 
+  }
+}
+input:focus{
+  color: $amazing;
+  border-radius: 40px;
+  padding: 20px;
+  animation: full .5s linear forwards ;
+  border: none;
+  @include border-round
+}
+input::placeholder{
+  color: $white;
+  padding: 20px;
+  font-size: 20px;
+  padding: 5px;
+}
+.contact-text{
+  color: $white;
+  order: 1;
+  line-height: .8;
+  h5{
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  p{
+    font-size: 20px ;
+    span{
+      font-size: 25px;
+      color: $white;
+    }
+  }
+  a {
+    font-size: 35px;
+    border-radius: 10%;
+    
+    margin-top: 10px;
+    padding:0  10px 10px 10px ;
+  }
+  .contact-text a:nth-child(1){
+    color: #1877f2;
+  margin-right: 10px ;
+}
+.contact-text a:nth-child(2){
+  color: #c9510c;
+  margin-right: 10px ;
+}
+.contact-text a:nth-child(3){
+  color: #0a66c2;
+  margin-right: 10px ;
+}
+.contact-text a:last-child{
+  color: #c13584;
+  margin-right: 10px ;
+}
+a:hover{
+  color: white;
+  margin-top: 10px;
+  
+}
+}
+.btn-form{
+  order: 3;
+  background-color: transparent;
+  border: none;
+}
+.btn-form p{
+  color: $amazing;
+  background-color: $white;
+  width: 60%;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 1.2px;
+  margin: 50px;
+}
+.btn-form:hover p{
+  @include full;
+}
